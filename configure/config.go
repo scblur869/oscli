@@ -52,7 +52,7 @@ func Setup() {
 		profileTxt = strings.Replace(profileTxt, "\n", "", -1)
 	}
 
-	fmt.Print("ElasticSearch Host [" + currentHost + "]: ")
+	fmt.Print("opensearch Host [" + currentHost + "]: ")
 	hostTxt, _ := configRead.ReadString('\n')
 	if hostTxt == "\n" {
 		hostTxt = currentHost

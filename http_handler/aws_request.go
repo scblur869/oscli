@@ -92,7 +92,7 @@ func PutRequest(url string, payload interface{}) *http.Response {
 
 /*
  signs the request with the v4 aws signing method using the client key and secret and service
- this also allows for IAM roles of the user running the oscli to be leveraged for elasticsearch cluster permissions
+ this also allows for IAM roles of the user running the oscli to be leveraged for opensearch cluster permissions
 */
 
 func signRequest(req *http.Request, body io.ReadSeeker) *http.Header {

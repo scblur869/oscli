@@ -1,12 +1,12 @@
 # oscli
-## elasticsearch command-line tool
+## opensearch command-line tool
 
-### simple app in golang to give easy access to elasticsearch api calls from command line based on your iam role in AWS
+### simple app in golang to give easy access to opensearch api calls from command line based on your iam role in AWS
 
 
 ### Requirements:
-  - must have aws cli installed and configured with permissions to elasticsearch in AWS
-  - elasticsearch endpoint URI exposed and known
+  - must have aws cli installed and configured with permissions to opensearch in AWS
+  - opensearch endpoint URI exposed and known
   - go build requires access to the internet to download packages
 
 Deployment:
@@ -29,7 +29,7 @@ admin
 configure
 	 { allows for aws profile and elastic host url }
 role-mapping
-	 new -name=role_name -user=elasticsearch_user -backend-role=kibana_user -host={nil or host match}
+	 new -name=role_name -user=opensearch_user -backend-role=kibana_user -host={nil or host match}
 indice
 	 delete -name=indexName
 template
@@ -44,7 +44,7 @@ example
 ```console
 some-user@ww2r32342de: ./oscli configure
 AWS Cli Profile [default]:
-ElasticSearch Host [https://my-elasticsearch-host-url.us-east-1.es.amazonaws.com]:
+opensearch Host [https://my-opensearch-host-url.us-east-1.es.amazonaws.com]:
 config file written..
 some-user@ww2r32342de:
 ```
@@ -52,7 +52,7 @@ some-user@ww2r32342de:
 ```console
 some-user@ww2r32342de: ./oscli configure
 AWS Cli Profile [default]: us-east-1-dev
-ElasticSearch Host [https://my-elasticsearch-host-url.us-east-1.es.amazonaws.com]: http://my-dev-cluster.us-east-1.es.amazonaws.com
+opensearch Host [https://my-opensearch-host-url.us-east-1.es.amazonaws.com]: http://my-dev-cluster.us-east-1.es.amazonaws.com
 config file written..
 some-user@ww2r32342de:
 ```

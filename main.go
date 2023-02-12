@@ -19,7 +19,7 @@ func printUsage() {
 	fmt.Println()
 	fmt.Println(color.Bold(color.BrightWhite("admin \n\t ls-role-mapping | ls-tenants | ls-security ")))
 	fmt.Println(color.Bold(color.BrightWhite("configure \n\t { allows for basic auth and elastic host url }")))
-	fmt.Println(color.Bold(color.BrightWhite("role-mapping \n\t new -name=role_name -user=elasticsearch_user -backend-role=kibana_user -host={nil or host match}")))
+	fmt.Println(color.Bold(color.BrightWhite("role-mapping \n\t new -name=role_name -user=opensearch_user -backend-role=kibana_user -host={nil or host match}")))
 	fmt.Println(color.Bold(color.BrightWhite("indice \n\t delete -name=indexName")))
 	fmt.Println(color.Bold(color.BrightWhite("template \n\t view -name=templateName")))
 	fmt.Println(color.Bold(color.BrightWhite("role \n\t new -name=test_role -clusterperms=indices_monitor,cluster_ops -index=\"movies-*\" -indexperm=read -tenant=sales,marketing -tenantperms=kibana_all_read")))
@@ -97,7 +97,7 @@ func main() {
 				admin.AddRoleMapping(actionPayload, name)
 
 			default:
-				fmt.Println(color.Bold(color.BrightWhite("role-mapping \n\t new -name=role_name -user=elasticsearch_user -backend-role=kibana_user -host={nil or host match}")))
+				fmt.Println(color.Bold(color.BrightWhite("role-mapping \n\t new -name=role_name -user=opensearch_user -backend-role=kibana_user -host={nil or host match}")))
 				os.Exit(1)
 			}
 		}
